@@ -1,11 +1,12 @@
 image: node:7.10
 
 before_script:
-  - working_directory: ~/protractor-selenium-sample-gitlab
-  - echo 'export LT_USERNAME="{your_lambdatest_username}"' >> $BASH_ENV
-  - echo 'export LT_ACCESS_KEY="{your_lambda_access_key}"' >> $BASH_ENV
-  - npm install
-  - npm install -g protractor
+  - |
+    working_directory: ~/protractor-selenium-sample-gitlab
+    echo 'export LT_USERNAME="{your_lambdatest_username}"' >> $BASH_ENV
+    echo 'export LT_ACCESS_KEY="{your_lambda_access_key}"' >> $BASH_ENV
+    npm install
+    npm install -g protractor
   
 job:
   script:
